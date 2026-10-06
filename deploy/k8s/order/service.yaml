@@ -1,0 +1,2 @@
+# Session 9: Service named order, selector app=order, port 9090 to the gRPC container port.
+# The gateway dials order:9090 inside the namespace.

@@ -1,0 +1,11 @@
+# Session 3: sqlc generate
+version: "2"
+sql:
+  - engine: postgresql
+    queries: queries
+    schema: migrations
+    gen:
+      go:
+        package: sqlc
+        out: internal/gen/sqlc
+        sql_package: pgx/v5

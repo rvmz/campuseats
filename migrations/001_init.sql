@@ -1,0 +1,11 @@
+-- Session 3: replace this file with the CampusEats schema and apply it with goose.
+--
+-- Tables: users, restaurants, menu_items, orders, order_items, outbox.
+-- Money is integer cents. Copy menu price onto order_items at insert time.
+-- orders.status defaults to 'placed' and has a check constraint matching internal/order/status.go.
+-- orders.idempotency_key exists now. Session 7 makes it required and unique per user.
+-- outbox is inserted in the same transaction as the order (session 6). Do not publish from this file.
+--
+-- +goose Up
+
+-- +goose Down

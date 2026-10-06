@@ -1,0 +1,7 @@
+# Session 9: Deployment for order in namespace campuseats.
+# replicas: 1 (one outbox publisher; do not scale this until you have a lease).
+# imagePullPolicy IfNotPresent after kind load.
+# envFrom a ConfigMap and a Secret. Do not put the DSN in this file.
+# readinessProbe: GET /readyz on the health port (pings Postgres).
+# livenessProbe: GET /healthz on the health port (does not ping Postgres).
+# resources requests: cpu 100m, memory 128Mi.

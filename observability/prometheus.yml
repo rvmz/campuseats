@@ -1,0 +1,2 @@
+# Session 11: scrape gateway:8080 and order:8081 at /metrics.
+# Route labels must be patterns (/v1/orders/{id}), never raw ids.

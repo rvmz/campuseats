@@ -1,0 +1,7 @@
+# Session 8: local stack.
+# Services to add: postgres, redpanda, migrate, order, gateway, kitchen, notifier.
+# Postgres and Redpanda need healthchecks.
+# migrate runs goose and exits. order depends on migrate completing successfully.
+# Application DNS names are the service names (order:9090, postgres:5432). Not localhost.
+# Publish 8080 for curl. Do not bake passwords into the image; use environment here.
+# Session 11: add prometheus and grafana on this file.

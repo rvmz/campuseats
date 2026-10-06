@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package kitchen.v1;
+
+option go_package = "campuseats/internal/gen/kitchen/v1;kitchenv1";
+
+// Session 2: staff commands (accept, reject, mark ready).
+// Session 6: each command updates orders.status and inserts an outbox row
+// in the same transaction.
+service KitchenService {
+}

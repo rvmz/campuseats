@@ -1,0 +1,11 @@
+# Session 12: GitHub Actions runs go test ./... on push and pull_request.
+# Use Go 1.23. Do not commit secrets for this workflow.
+name: ci
+on:
+  push:
+  pull_request:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "session 12 replaces this workflow"

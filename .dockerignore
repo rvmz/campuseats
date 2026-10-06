@@ -1,0 +1,5 @@
+.git
+instructor
+*.md
+.env
+bin
