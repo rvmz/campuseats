@@ -1,6 +1,6 @@
 # CampusEats architecture
 
-Session 2 fills this in. Later sessions update it when a failure mode gets a mechanism. Do not leave a heading empty.
+Session 2 fills this in. The write-up is [session-02.md](session-02.md). Later sessions update it when a failure mode gets a mechanism. Do not leave a heading empty.
 
 ## Context
 

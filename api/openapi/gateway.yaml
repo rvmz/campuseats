@@ -2,7 +2,7 @@ openapi: 3.0.3
 info:
   title: CampusEats gateway
   version: 0.1.0
-# Session 2: list the public routes you froze.
-# Session 4: add request and response schemas and the status codes you map from gRPC.
-# Session 5: bearer auth on order and kitchen routes, not on /healthz.
+# Session 2: docs/session-02.md. List the public routes you froze.
+# Session 4: docs/session-04.md. Add schemas and the status codes you map from gRPC.
+# Session 5: docs/session-05.md. Bearer auth on order and kitchen routes, not on /healthz.
 paths: {}

@@ -5,8 +5,8 @@ import "log/slog"
 
 // main starts the order gRPC server and the outbox publisher.
 // Session 1: load config, log, block until SIGINT/SIGTERM.
-// Session 3: open one pgx pool in main and pass it in.
-// Session 4: listen on GRPC_ADDR.
+// Session 3: docs/session-03.md. Open one pgx pool in main and pass it in.
+// Session 4: docs/session-04.md. Listen on GRPC_ADDR and shut down with GracefulStop.
 // Session 6: run the publisher until the root context is cancelled.
 // Session 9: serve /healthz and /readyz on HEALTH_ADDR.
 func main() {

@@ -191,7 +191,7 @@ You want `200` and `{"status":"ok"}`. Ctrl-C in the first terminal should return
 
 `cmd/order`, `cmd/kitchen`, and `cmd/notifier` still exit immediately. Give each the same start and stop shape: load config, log `service` as its own name, and block until SIGINT or SIGTERM. They do not listen on HTTP yet. A process that exits 0 on startup looks healthy and does nothing.
 
-Read `docs/architecture.md` before session 2. The headings are the worksheet.
+Read `docs/architecture.md` before session 2. The headings are the worksheet, and [session-02.md](session-02.md) is the write-up.
 
 ## What this session is not
 

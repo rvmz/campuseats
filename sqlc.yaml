@@ -1,4 +1,5 @@
 # Session 3: sqlc generate
+# uuid columns become plain strings. Nullable text and timestamptz become pointers.
 version: "2"
 sql:
   - engine: postgresql
@@ -9,3 +10,7 @@ sql:
         package: sqlc
         out: internal/gen/sqlc
         sql_package: pgx/v5
+        emit_pointers_for_null_types: true
+        overrides:
+          - db_type: "uuid"
+            go_type: "string"

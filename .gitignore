@@ -6,7 +6,3 @@ bin/
 *.exe
 *.test
 coverage.out
-
-# Generated protobuf and sqlc output. Commit it only after session 4 / 3
-# if you want CI to build without protoc and sqlc.
-/internal/gen/

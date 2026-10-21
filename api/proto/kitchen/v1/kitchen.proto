@@ -4,7 +4,8 @@ package kitchen.v1;
 
 option go_package = "campuseats/internal/gen/kitchen/v1;kitchenv1";
 
-// Session 2: staff commands (accept, reject, mark ready).
+// Session 2: docs/session-02.md. Declare AcceptOrder, RejectOrder, MarkReady.
+// Session 5: the HTTP accept route checks the role and returns 204.
 // Session 6: each command updates orders.status and inserts an outbox row
 // in the same transaction.
 service KitchenService {

@@ -15,13 +15,17 @@ Explanation: [session-01.md](session-01.md).
 
 ## 2 — System design
 
+Explanation: [session-02.md](session-02.md).
+
 - [ ] Every heading in `docs/architecture.md` is filled in
 - [ ] The place-order sequence names who talks HTTP, who talks gRPC, and who writes Postgres
-- [ ] One SLO has an endpoint and a number
+- [ ] Two SLOs have numbers: `POST /v1/orders` latency, and how quickly the kitchen sees a committed order
 - [ ] Three failures say what the student still has afterwards
 - [ ] Proto and OpenAPI names match the API table in that doc
 
 ## 3 — Databases
+
+Explanation: [session-03.md](session-03.md). Postgres user is `campuseats`, the same URL as `.env.example`.
 
 - [ ] `migrations/001_init.sql` applies with goose up and reverses with goose down
 - [ ] Money is integer cents. Status has a check constraint
@@ -29,9 +33,12 @@ Explanation: [session-01.md](session-01.md).
 - [ ] Creating an order and its items is one transaction
 - [ ] A failing item insert leaves no order row
 - [ ] Price on the line is copied from `menu_items` at insert time
-- [ ] Seed script creates the fixed user, kitchen user, restaurant, and two items
+- [ ] `scripts/seed.sql` loads the fixed users, restaurant, and two items
+- [ ] Generated sqlc code in `internal/gen/sqlc` is committed
 
 ## 4 — REST and gRPC
+
+Explanation: [session-04.md](session-04.md). Stay on the `net/http` mux from session 1.
 
 - [ ] `CreateOrder` and `GetOrder` are implemented on `order`
 - [ ] `POST /v1/orders` and `GET /v1/orders/{id}` go through the gateway
@@ -40,12 +47,15 @@ Explanation: [session-01.md](session-01.md).
 - [ ] `Idempotency-Key` is forwarded. It is not stored in the gateway
 - [ ] `api/openapi/gateway.yaml` matches the routes you actually serve
 - [ ] Postgres error text is logged, not returned to the client
+- [ ] Generated protobuf code in `internal/gen` is committed
 
 ## 5 — Auth
 
+Explanation: [session-05.md](session-05.md).
+
 - [ ] Missing or bad bearer token → 401. Wrong role → 403
 - [ ] `user_id` is taken from the token. The public JSON does not contain it
-- [ ] A student cannot accept an order. A kitchen token can call accept
+- [ ] A student cannot accept an order. A kitchen token reaches accept and gets 204 until session 6 changes the status
 - [ ] A student cannot read someone else's order
 - [ ] `/healthz` stays unauthenticated
 - [ ] `JWT_SECRET` comes from the environment

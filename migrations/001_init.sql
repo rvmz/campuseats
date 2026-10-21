@@ -1,4 +1,4 @@
--- Session 3: replace this file with the CampusEats schema and apply it with goose.
+-- Session 3: docs/session-03.md. Replace this file with that schema and apply it with goose.
 --
 -- Tables: users, restaurants, menu_items, orders, order_items, outbox.
 -- Money is integer cents. Copy menu price onto order_items at insert time.

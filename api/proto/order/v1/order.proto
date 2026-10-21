@@ -4,8 +4,8 @@ package order.v1;
 
 option go_package = "campuseats/internal/gen/order/v1;orderv1";
 
-// Session 2: declare the RPCs you froze on the board.
-// Session 4: generate Go code and implement them in cmd/order.
+// Session 2: docs/session-02.md. Declare CreateOrder and GetOrder.
+// Session 4: docs/session-04.md. Generate Go and implement them in cmd/order.
 // The gateway calls this service. It does not write SQL itself.
 service OrderService {
 }

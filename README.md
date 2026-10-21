@@ -4,7 +4,15 @@ CampusEats is a campus food-ordering backend. A student places an order, the kit
 
 This repository is the whole course. Each session extends it. Comments that start with `Session N:` are the work for that session.
 
-Session 1 is written up in [docs/session-01.md](docs/session-01.md): why a process loads config from the environment, logs JSON, answers `/healthz`, and shuts down on SIGTERM. Later sessions are checklists in [docs/tasks.md](docs/tasks.md) until their write-ups are added.
+Sessions 1–5 are written up in `docs/`. Later sessions are checklists in [docs/tasks.md](docs/tasks.md).
+
+| Session | Write-up |
+|---|---|
+| 1 | [A process that can start and stop](docs/session-01.md) |
+| 2 | [Where an order lives](docs/session-02.md) |
+| 3 | [The order is one transaction](docs/session-03.md) |
+| 4 | [HTTP at the edge, gRPC behind it](docs/session-04.md) |
+| 5 | [Who is calling](docs/session-05.md) |
 
 ## Layout
 
@@ -21,7 +29,9 @@ Session 1 is written up in [docs/session-01.md](docs/session-01.md): why a proce
 | `migrations` | Postgres schema |
 | `deploy` | Docker, Compose, Kubernetes, AWS policy |
 | `docs/tasks.md` | What to finish each session |
-| `docs/architecture.md` | Design worksheet |
+| `docs/session-01.md` … `session-05.md` | Write-ups for those sessions |
+| `docs/architecture.md` | Design worksheet, filled in session 2 |
+| `scripts/seed.sql` | Fixed users and menu, after session 3 |
 
 ## Build
 

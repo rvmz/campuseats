@@ -1,11 +1,13 @@
-# Session 4: from api/, run buf generate. protoc with the same go_package options is fine too.
+# Session 4: from api/, run `buf generate`.
+# out is the module root, so files land in internal/gen next to the other Go packages.
+# protoc from the repo root, with --go_opt=module=campuseats, writes the same paths.
 version: v2
 plugins:
   - local: protoc-gen-go
-    out: .
+    out: ..
     opt: module=campuseats
   - local: protoc-gen-go-grpc
-    out: .
+    out: ..
     opt: module=campuseats
 inputs:
   - directory: proto
